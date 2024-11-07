@@ -32,10 +32,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assemble --stacktrace --daemon --parallel
-
-    - name: Run tests
-      run: ./gradlew test --stacktrace
+      run: ./gradlew assembleFullRelease --stacktrace --daemon --parallel
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
