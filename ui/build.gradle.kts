@@ -5,10 +5,15 @@ plugins {
     id("android-module-dependencies")
     id("test-module-dependencies")
     id("jacoco-module-dependencies")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace = "app.aaps.ui"
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
@@ -27,4 +32,13 @@ dependencies {
     api(libs.androidx.core)
     ksp(libs.com.google.dagger.compiler)
     ksp(libs.com.google.dagger.android.processor)
+
+    // Compose dependencies
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
 }

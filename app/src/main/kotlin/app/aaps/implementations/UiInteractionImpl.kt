@@ -31,7 +31,7 @@ import app.aaps.ui.dialogs.CareDialog
 import app.aaps.ui.dialogs.ExtendedBolusDialog
 import app.aaps.ui.dialogs.FillDialog
 import app.aaps.ui.dialogs.InsulinDialog
-import app.aaps.ui.dialogs.LoopDialog
+import app.aaps.ui.dialogs.LoopDialogCompose
 import app.aaps.ui.dialogs.ProfileSwitchDialog
 import app.aaps.ui.dialogs.ProfileViewerDialog
 import app.aaps.ui.dialogs.SiteRotationDialog
@@ -91,8 +91,8 @@ class UiInteractionImpl @Inject constructor(
     }
 
     override fun runLoopDialog(fragmentManager: FragmentManager, showOkCancel: Int) {
-        LoopDialog()
-            .also { it.arguments = Bundle().also { bundle -> bundle.putInt("showOkCancel", showOkCancel) } }
+        LoopDialogCompose()
+            .also { it.arguments = Bundle().also { bundle -> bundle.putBoolean("showOkCancel", showOkCancel != 0) } }
             .show(fragmentManager, "LoopDialog")
     }
 
