@@ -168,7 +168,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_running_mode),
+                            painter = painterResource(id = app.aaps.core.ui.R.drawable.ic_running_mode),
                             contentDescription = null,
                             modifier = Modifier.size(24.dp)
                         )
@@ -219,7 +219,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                             if (dialogState.showClosedLoop) {
                                 LoopButton(
                                     text = stringResource(app.aaps.core.ui.R.string.closedloop),
-                                    iconRes = R.drawable.ic_loop_closed,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_closed,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -236,7 +236,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                             if (dialogState.showLgsLoop) {
                                 LoopButton(
                                     text = stringResource(app.aaps.core.ui.R.string.lowglucosesuspend),
-                                    iconRes = R.drawable.ic_loop_lgs,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_lgs,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -253,7 +253,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                             if (dialogState.showOpenLoop) {
                                 LoopButton(
                                     text = stringResource(app.aaps.core.ui.R.string.openloop),
-                                    iconRes = R.drawable.ic_loop_open,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_open,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -270,7 +270,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                             if (dialogState.showDisable) {
                                 LoopButton(
                                     text = stringResource(app.aaps.core.ui.R.string.disableloop),
-                                    iconRes = R.drawable.ic_loop_disabled,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_disabled,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -299,7 +299,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                         if (dialogState.showResume) {
                             LoopButton(
                                 text = stringResource(app.aaps.core.ui.R.string.resumeloop),
-                                iconRes = R.drawable.ic_loop_resume,
+                                iconRes = app.aaps.core.ui.R.drawable.ic_loop_resume,
                                 onClick = {
                                     if (showOkCancel) {
                                         showConfirmation(
@@ -323,7 +323,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                             ) {
                                 LoopButton(
                                     text = stringResource(R.string.duration1h),
-                                    iconRes = R.drawable.ic_loop_paused,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_paused,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -338,7 +338,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                                 )
                                 LoopButton(
                                     text = stringResource(R.string.duration2h),
-                                    iconRes = R.drawable.ic_loop_paused,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_paused,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -353,7 +353,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                                 )
                                 LoopButton(
                                     text = stringResource(R.string.duration3h),
-                                    iconRes = R.drawable.ic_loop_paused,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_paused,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -368,7 +368,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                                 )
                                 LoopButton(
                                     text = stringResource(R.string.duration10h),
-                                    iconRes = R.drawable.ic_loop_paused,
+                                    iconRes = app.aaps.core.ui.R.drawable.ic_loop_paused,
                                     onClick = {
                                         if (showOkCancel) {
                                             showConfirmation(
@@ -399,7 +399,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                         if (dialogState.showReconnect) {
                             LoopButton(
                                 text = stringResource(R.string.reconnect),
-                                iconRes = R.drawable.ic_loop_reconnect,
+                                iconRes = app.aaps.core.ui.R.drawable.ic_loop_reconnect,
                                 onClick = {
                                     if (showOkCancel) {
                                         showConfirmation(
@@ -424,7 +424,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                                 if (dialogState.showDisconnect15m) {
                                     LoopButton(
                                         text = stringResource(R.string.duration15m),
-                                        iconRes = R.drawable.ic_loop_disconnected,
+                                        iconRes = app.aaps.core.ui.R.drawable.ic_loop_disconnected,
                                         onClick = {
                                             if (showOkCancel) {
                                                 showConfirmation(
@@ -441,7 +441,7 @@ class LoopDialogCompose : DaggerDialogFragment() {
                                 if (dialogState.showDisconnect30m) {
                                     LoopButton(
                                         text = stringResource(R.string.duration30m),
-                                        iconRes = R.drawable.ic_loop_disconnected,
+                                        iconRes = app.aaps.core.ui.R.drawable.ic_loop_disconnected,
                                         onClick = {
                                             if (showOkCancel) {
                                                 showConfirmation(
